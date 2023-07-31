@@ -1,0 +1,5 @@
+/data/
+/*.mbtiles
+/*.osm.pbf
+/server/
+tilestats.json
