@@ -96,14 +96,7 @@
             "maxzoom": 14,
             "combine_below": 15
         },
-        "bike_routes": {
-            "minzoom": 9,
-            "maxzoom": 14,
-            "combine_below": 15,
-            "simplify_below": 13,
-            "simplify_level": 0.0002
-        },
-        "hiking_routes": {
+        "routes": {
             "minzoom": 9,
             "maxzoom": 14,
             "combine_below": 15,

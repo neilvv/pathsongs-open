@@ -10,7 +10,7 @@
       "attribution": "© <a href='http://openstreetmap.org'>OpenStreetMap</a>",
       "tilejson": "3.0.0",
       "tiles": [
-        "http://localhost:8091/tile/{z}/{x}/{y}"
+        "http://localhost:8080/{z}/{x}/{y}.pbf"
       ],
       "type": "vector",
       "scheme": "xyz",
@@ -13468,6 +13468,50 @@
       }
     },
     {
+        "id": "bike-routes",
+        "type": "line",
+        "paint": {
+            "line-color": "#4d0385",
+            "line-width": {
+                "stops": [[9, 1], [10, 3], [14, 4], [18, 5], [20, 6]]
+            },
+            "line-opacity": 0.5
+        },
+        "layout": {"line-cap": "round", "line-join": "round"},
+        "source-layer": "bike_routes",
+        "source": "versatiles-shortbread"
+    },
+    {
+        "id": "mtb-routes",
+        "type": "line",
+        "paint": {
+            "line-color": "#a83256",
+            "line-width": {
+                "stops": [[9, 1], [10, 3], [14, 4], [18, 5], [20, 6]]
+            },
+            "line-opacity": 0.5
+        },
+        "layout": {"line-cap": "round", "line-join": "round"},
+        "source-layer": "mtb_routes",
+        "source": "versatiles-shortbread"
+    },
+    
+    {
+        "id": "hiking-routes",
+        "type": "line",
+        "paint": {
+            "line-color": "#f70af3",
+            "line-width": {
+                "stops": [[9, 0.5], [10, 2],[14, 3], [18, 4], [20, 5]]
+            },
+            "line-opacity": 1
+        },
+        "layout": {"line-cap": "round", "line-join": "round"},
+        
+        "source-layer": "hiking_routes",
+        "source": "versatiles-shortbread"
+    },
+    {
       "id": "poi-amenity",
       "type": "symbol",
       "source": "versatiles-shortbread",
@@ -14742,6 +14786,50 @@
         "text-halo-blur": 1,
         "text-color": "#333344"
       }
+    },
+    {
+        "id": "label-route-bike",
+        "type": "symbol",
+        
+        "layout": {
+            "text-field": "{name}",
+            "symbol-placement": "line",
+            "symbol-spacing": 300,
+            "text-anchor": "center",
+            "text-size": {"stops": [[12, 10], [15, 13]]},
+            "text-font": ["Noto Sans Regular"]
+        },
+        "paint": {
+            "text-halo-color": "rgba(0, 0, 0, 0.8)",
+            "text-halo-width": 3,
+            "text-halo-blur": 1,
+            "text-color": "#ffffff"
+        },
+        "minzoom": 12,
+        "source-layer": "bike_routes",
+        "source": "versatiles-shortbread"
+    },
+    {
+        "id": "label-route-hiking",
+        "type": "symbol",
+        
+        "layout": {
+            "text-field": "{name}",
+            "symbol-placement": "line",
+            
+            "text-anchor": "center",
+            "text-size": {"stops": [[12, 10], [15, 13]]},
+            "text-font": ["Noto Sans Regular"]
+        },
+        "paint": {
+            "text-halo-color": "rgba(0, 0, 0, 0.8)",
+            "text-halo-width": 3,
+            "text-halo-blur": 1,
+            "text-color": "#ffffff"
+        },
+        "minzoom": 12,
+        "source-layer": "hiking_routes",
+        "source": "versatiles-shortbread"
     },
     {
       "id": "label-street-trunk",

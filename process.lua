@@ -1140,6 +1140,11 @@ function admin_level_valid(admin_level, is_unset_valid)
 	return (is_unset_valid and admin_level == "") or admin_level == "2" or admin_level == "3" or admin_level == "4"
 end
 
+local accepted_networks = { mtb = Set { "none" },
+hiking = Set { "iwn", "nwn", "rwn", "lwn"},
+bicycle = Set { "icn", "ncn", "rcn", "lcn"},
+foot = Set { "iwn", "nwn", "rwn", "lwn"} }
+
 ---- Accept boundary relations
 function relation_scan_function(relation)
 	--if relation:Find("type") ~= "boundary" then
@@ -1159,42 +1164,62 @@ function relation_scan_function(relation)
 	
 	if relation:Find("type")=="route" and relation:Find("route")=="bicycle" then
 		local network = relation:Find("network")
-		if network=="ncn" then
+		if accepted_networks["bicycle"][network] then
 			relation:Accept()
-	  end
+	    end
+	
+	end
+
+    if relation:Find("type")=="route" and relation:Find("route")=="mtb" then
+		local network = relation:Find("network")
+		if accepted_networks["mtb"][network] then
+			relation:Accept()
+	    end
 	
 	end
 
 	if relation:Find("type")=="route" and relation:Find("route")=="hiking" then
 		local network = relation:Find("network")
-		if network=="nwn" then
+		if accepted_networks["hiking"][network] then
 			relation:Accept()
-	  end
+	    end
 	
 	end
 
 end
 
 function relation_function(relation)
-  if relation:Find("type")=="route" and relation:Find("route")=="bicycle" then
-    
+    local is_route = relation:Find("type")=="route"
+    local route = relation:Find("route")
     local network = relation:Find("network")
-    if network == "ncn" then
-        relation:Layer("bike_routes", false)
-        relation:Attribute("class", relation:Find("network"))
+
+    if (is_route and accepted_networks[route] and accepted_networks[route][network]) then
+        print("Adding: ", relation:Find("name"))
+        relation:Layer("routes", false)
+        relation:Attribute("network", network)
+        relation:Attribute("route", route)
         relation:Attribute("ref", relation:Find("ref"))
         relation:Attribute("name", relation:Find("name"))
-    end
-  end
-	if relation:Find("type")=="route" and relation:Find("route")=="hiking" then
+
+    --if route and route=="bicycle" then
     
-    local network = relation:Find("network")
-    if network == "nwn" then
-        relation:Layer("hiking_routes", false)
-        relation:Attribute("class", relation:Find("network"))
-        relation:Attribute("ref", relation:Find("ref"))
-        relation:Attribute("name", relation:Find("name"))
-    end
+    
+    --if network == "ncn" then
+    --    relation:Layer("routes", false)
+    --    relation:Attribute("class", relation:Find("network"))
+     --   relation:Attribute("ref", relation:Find("ref"))
+    --    relation:Attribute("name", relation:Find("name"))
+    --end
+  --end
+	--if route and route=="hiking" then
+    
+    --local network = relation:Find("network")
+    --if network == "nwn" then
+     --   relation:Layer("routes", false)
+       -- relation:Attribute("class", relation:Find("network"))
+        --relation:Attribute("ref", relation:Find("ref"))
+        --relation:Attribute("name", relation:Find("name"))
+   -- end
   end
 end
 
