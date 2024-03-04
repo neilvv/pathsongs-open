@@ -3,3 +3,4 @@
 /*.osm.pbf
 /server/
 tilestats.json
+output/
