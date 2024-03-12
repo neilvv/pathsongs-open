@@ -1194,7 +1194,7 @@ function relation_function(relation)
     local network = Find("network")
 
     if (is_route and accepted_networks[route] and accepted_networks[route][network]) then
-        print("Adding: ", Find("name"))
+        --print("Adding: ", Find("name"))
         Layer("routes", false)
         Attribute("network", network)
         Attribute("route", route)

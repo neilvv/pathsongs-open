@@ -1,0 +1,1 @@
+./shp2geojson.sh ne_10m_urban_areas.prj ne_10m_geojson.geojson ne_10m_urban_areas.shp

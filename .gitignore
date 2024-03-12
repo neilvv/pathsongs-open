@@ -1,7 +1,11 @@
-/data/
+data/
 /*.mbtiles
 /*.osm.pbf
-/server/
+server/
 tilestats.json
 output/
 workers/
+node_modules/
+store/
+landcover/
+songs2shapefile/data/

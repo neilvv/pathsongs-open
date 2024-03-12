@@ -1,0 +1,57 @@
+{
+    "layers": {
+        
+        "boundary_labels": {
+            "minzoom": 2,
+            "maxzoom": 14,
+            "source": "data/admin-points-4326/admin_points.shp",
+            "source_columns": true
+        },
+        
+        
+        "ocean": {
+            "minzoom": 8,
+            "maxzoom": 14,
+            "source": "data/water-polygons-split-4326/water_polygons.shp",
+            "source_columns": true,
+            "simplify_below": 14,
+            "simplify_level": 0.0001,
+            "simplify_ratio": 2
+        },
+        "ocean-low": {
+            "minzoom": 0,
+            "maxzoom": 7,
+            "source": "data/simplified-water-polygons-split-4326/simplified_water_polygons.shp",
+            "source_columns": true,
+            "simplify_below": 14,
+            "simplify_level": 0.0001,
+            "simplify_ratio": 2,
+            "write_to": "ocean"
+        }
+        
+    },
+    "settings": {
+        "minzoom": 0,
+        "maxzoom": 14,
+        "basezoom": 14,
+        "include_ids": false,
+        "combine_below": 14,
+        "name": "Pathsongs Coastline Basemap",
+        "version": "0.0.1",
+        "description": "Tile config for a simple vector tiles schema",
+        "compress": "gzip",
+        "filemetadata": {
+            "tilejson": "2.0.0",
+            "scheme": "xyz",
+            "type": "baselayer",
+            "format": "pbf",
+            "tiles": [
+                "https://example.com/liechtenstein/{z}/{x}/{y}.pbf"
+            ]
+        },
+        "metadata": {
+            "author": "Pathsongs Ltd",
+            "license": "Open Database License 1.0"
+        }
+    }
+}

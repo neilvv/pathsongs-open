@@ -96,7 +96,21 @@
             "maxzoom": 14,
             "combine_below": 15
         },
+        "bike_routes": {
+            "minzoom": 9,
+            "maxzoom": 14,
+            "combine_below": 15,
+            "simplify_below": 13,
+            "simplify_level": 0.0002
+        },
         "routes": {
+            "minzoom": 9,
+            "maxzoom": 14,
+            "combine_below": 15,
+            "simplify_below": 13,
+            "simplify_level": 0.0002
+        },
+        "hiking_routes": {
             "minzoom": 9,
             "maxzoom": 14,
             "combine_below": 15,
@@ -151,25 +165,6 @@
             "simplify_level": 0.0001,
             "simplify_ratio": 2
         },
-        "ocean": {
-            "minzoom": 8,
-            "maxzoom": 14,
-            "source": "data/water-polygons-split-4326/water_polygons.shp",
-            "source_columns": true,
-            "simplify_below": 14,
-            "simplify_level": 0.0001,
-            "simplify_ratio": 2
-        },
-        "ocean-low": {
-            "minzoom": 0,
-            "maxzoom": 7,
-            "source": "data/simplified-water-polygons-split-4326/simplified_water_polygons.shp",
-            "source_columns": true,
-            "simplify_below": 14,
-            "simplify_level": 0.0001,
-            "simplify_ratio": 2,
-            "write_to": "ocean"
-        },
         "water_polygons_labels": {
             "minzoom": 14,
             "maxzoom": 14,
@@ -197,8 +192,8 @@
         "basezoom": 14,
         "include_ids": false,
         "combine_below": 14,
-        "name": "Shortbread",
-        "version": "1.0",
+        "name": "Pathsongs Open",
+        "version": "0.0.1",
         "description": "Tile config for a simple vector tiles schema",
         "compress": "gzip",
         "filemetadata": {
@@ -211,7 +206,7 @@
             ]
         },
         "metadata": {
-            "author": "OpenStreetMap contributors, Geofabrik GmbH",
+            "author": "Pathsongs Ltd",
             "license": "Open Database License 1.0"
         }
     }

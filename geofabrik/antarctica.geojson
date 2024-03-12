@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"1","parent":"antartica"},"geometry":{"type":"Polygon","coordinates":[[[-180,-90],[180,-90],[180,-60],[-180,-60],[-180,-90]]]},"bbox":[-180,-90,180,-60]}],"properties":{"name":"antartica"}}
