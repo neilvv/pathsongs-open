@@ -4,10 +4,10 @@ echo $ROOT
 set -e
 rm -rf ../fonts/*
 mkdir -p ../fonts
-font-maker --name "Noto Sans Italic" ../fonts/italic \
+font-maker --name "noto_sans_italic" ../fonts/italic \
 $ROOT/NotoSans/$VARIANT/NotoSans-Italic.ttf
 
-font-maker --name "Noto Sans Medium" ../fonts/medium \
+font-maker --name "noto_sans_medium" ../fonts/medium \
 $ROOT/NotoSans/$VARIANT/NotoSans-Medium.ttf \
 $ROOT/NotoSansArmenian/$VARIANT/NotoSansArmenian-Medium.ttf \
 $ROOT/NotoSansHebrew/$VARIANT/NotoSansHebrew-Medium.ttf \
@@ -32,7 +32,7 @@ $ROOT/NotoSansKhmer/$VARIANT/NotoSansKhmer-Medium.ttf \
 $ROOT/NotoSansSymbols/$VARIANT/NotoSansSymbols-Medium.ttf \
 $ROOT/NotoSansCham/$VARIANT/NotoSansCham-Medium.ttf
 
-font-maker --name "Noto Sans Regular" ../fonts/regular \
+font-maker --name "noto_sans_regular" ../fonts/regular \
 $ROOT/NotoSans/$VARIANT/NotoSans-Regular.ttf \
 $ROOT/NotoSansArmenian/$VARIANT/NotoSansArmenian-Regular.ttf \
 $ROOT/NotoSansHebrew/$VARIANT/NotoSansHebrew-Regular.ttf \
