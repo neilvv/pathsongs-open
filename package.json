@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-assets": "mkdir -p dist/pathsongs-open && cp style/pathsongs-open.json dist/pathsongs-open"
+    "build-assets": "mkdir -p dist/pathsongs-open && cp style/pathsongs-open.json dist/pathsongs-open && cp -r fonts dist/pathsongs-open/ && cp -r style/sprites dist/pathsongs-open/"
   },
   "keywords": [],
   "author": "",
