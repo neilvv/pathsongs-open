@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-assets": "mkdir -p dist/pathsongs-open && sed 's/{HOSTNAME}/pmtiles.pathsongs.com/' < style/pathsongs-open.json > dist/pathsongs-open/pathsongs-open.json && cp -r fonts dist/pathsongs-open/ && cp -r style/sprites dist/pathsongs-open/"
+    "build-assets": "mkdir -p dist/pathsongs-open && sed 's/{HOSTNAME}/pmtiles.pathsongs.com/' < style/pathsongs-open.json > dist/pathsongs-open/pathsongs-open.json && cp -r fonts dist/pathsongs-open/ && cp -r style/sprites dist/pathsongs-open/",
+    "build-styles": "tsx src/styles/pathsongs-open.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,9 @@
   "dependencies": {
     "@turf/bbox": "^6.5.0",
     "@turf/boolean-point-in-polygon": "^6.5.0",
-    "@types/geojson": "^7946.0.14"
+    "@types/geojson": "^7946.0.14",
+    "@versatiles/style": "^4.3.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
   }
 }
