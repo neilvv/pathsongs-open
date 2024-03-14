@@ -79,14 +79,14 @@ function fillWithFallback(value1, value2, value3)
 	return value3
 end
 
--- Set name, name_en, and name_de on any object
+-- Set name, name_en
 function setNameAttributes(obj)
 	local name = Find("name")
 	local name_de = Find("name:de")
 	local name_en = Find("name:en")
-	Attribute("name", fillWithFallback(name, name_en, name_de))
-	Attribute("name_de", fillWithFallback(name_de, name, name_en))
-	Attribute("name_en", fillWithFallback(name_en, name, name_de))
+	Attribute("name", fillWithFallback(name, name_en, name))
+	--Attribute("name_de", fillWithFallback(name_de, name, name_en))
+	Attribute("name_en", fillWithFallback(name_en, name, name))
 end
 
 -- Return true if way is oneway

@@ -9,3 +9,5 @@ node_modules/
 store/
 landcover/
 songs2shapefile/data/
+input/
+dist/

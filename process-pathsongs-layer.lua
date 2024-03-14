@@ -75,8 +75,8 @@ function fillWithFallback(value1, value2, value3)
 	end
 	if value2 ~= "" then
 		return value2
-    end
-    return value3
+	end
+	return value3
 end
 
 -- Set name, name_en, and name_de on any object
