@@ -106,10 +106,15 @@
   "icon-windmill": {"width":32,"height":32,"x":320,"y":128,"pixelRatio":1,"sdf":true},
   "icon-zoo": {"width":32,"height":32,"x":320,"y":160,"pixelRatio":1,"sdf":true},
   "marking-arrow": {"width":14,"height":25,"x":352,"y":0,"pixelRatio":1,"sdf":true},
-  "pattern-hatched_thin": {"width":22,"height":22,"x":320,"y":288,"pixelRatio":1,"sdf":true},
-  "pattern-striped": {"width":22,"height":22,"x":0,"y":320,"pixelRatio":1,"sdf":true},
-  "pattern-warning": {"width":22,"height":22,"x":22,"y":320,"pixelRatio":1,"sdf":true},
+  "pattern-hatched_thin": {"width":22,"height":22,"x":96,"y":320,"pixelRatio":1,"sdf":true},
+  "pattern-striped": {"width":22,"height":22,"x":118,"y":320,"pixelRatio":1,"sdf":true},
+  "pattern-warning": {"width":22,"height":22,"x":140,"y":320,"pixelRatio":1,"sdf":true},
   "symbol-triangle": {"width":32,"height":32,"x":320,"y":192,"pixelRatio":1,"sdf":true},
+  "osm-peak": {"width":24,"height":24,"x":320,"y":288,"pixelRatio":1,"sdf":true},
+  "osm-saddle": {"width":24,"height":24,"x":0,"y":320,"pixelRatio":1,"sdf":true},
+  "osm-spring": {"width":24,"height":24,"x":24,"y":320,"pixelRatio":1,"sdf":true},
+  "osm-waterfall": {"width":24,"height":24,"x":48,"y":320,"pixelRatio":1,"sdf":true},
+  "osm-ford": {"width":24,"height":24,"x":72,"y":320,"pixelRatio":1,"sdf":true},
   "transport-tram": {"width":32,"height":32,"x":320,"y":224,"pixelRatio":1,"sdf":true},
   "transport-information": {"width":32,"height":32,"x":320,"y":256,"pixelRatio":1,"sdf":true}
 }
