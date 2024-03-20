@@ -106,9 +106,10 @@
   "icon-windmill": {"width":128,"height":128,"x":1280,"y":512,"pixelRatio":4,"sdf":true},
   "icon-zoo": {"width":128,"height":128,"x":1280,"y":640,"pixelRatio":4,"sdf":true},
   "marking-arrow": {"width":56,"height":100,"x":1408,"y":0,"pixelRatio":4,"sdf":true},
-  "pattern-hatched_thin": {"width":88,"height":88,"x":1280,"y":1024,"pixelRatio":4,"sdf":true},
-  "pattern-striped": {"width":88,"height":88,"x":1280,"y":1112,"pixelRatio":4,"sdf":true},
-  "pattern-warning": {"width":88,"height":88,"x":0,"y":1280,"pixelRatio":4,"sdf":true},
-  "transport-tram": {"width":128,"height":128,"x":1280,"y":768,"pixelRatio":4,"sdf":true},
-  "transport-information": {"width":128,"height":128,"x":1280,"y":896,"pixelRatio":4,"sdf":true}
+  "pattern-hatched_thin": {"width":88,"height":88,"x":1280,"y":1152,"pixelRatio":4,"sdf":true},
+  "pattern-striped": {"width":88,"height":88,"x":0,"y":1280,"pixelRatio":4,"sdf":true},
+  "pattern-warning": {"width":88,"height":88,"x":88,"y":1280,"pixelRatio":4,"sdf":true},
+  "symbol-triangle": {"width":128,"height":128,"x":1280,"y":768,"pixelRatio":4,"sdf":true},
+  "transport-tram": {"width":128,"height":128,"x":1280,"y":896,"pixelRatio":4,"sdf":true},
+  "transport-information": {"width":128,"height":128,"x":1280,"y":1024,"pixelRatio":4,"sdf":true}
 }
